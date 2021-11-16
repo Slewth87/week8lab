@@ -30,6 +30,11 @@ function showChoice(uChoice){
     document.getElementById("chosen").style.display = "block";
 }
 
+/* First if/else section. Used to display chosen option.
+Reusable so that this can be used for both the player and the PC choice.
+Two separate queries, first to determine if this is to display the Player's or the PC's choice,
+and second query to determine which image/choice to display.*/
+
 function imagePicker(contest,player){
     if(player==0){
         var pic="chosenPic";
@@ -61,6 +66,9 @@ function getResult(uChoice){
         showResult(uChoice,result);
     },2000);
 }
+
+/* Second if/else section, for determining the actual result of the game.
+Made a deliberate choice to use a full set of logical statements rather than nesting if/else queries, for easier readability. */
 
 function showResult(uChoice,result){
     self.uChoice= uChoice;
